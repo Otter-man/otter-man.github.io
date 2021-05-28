@@ -16,7 +16,7 @@ if (window.SwitcherListener == undefined) {
     $(document).keydown(function (event) {
         if (keystrokes.length < correctShortcutArr.length) {
             if (event.keyCode == 32) {
-                keystrokes.push(event.code);
+                keystrokes.push(event.key);
             }
             else {
                 keystrokes.push(event.key);
@@ -26,7 +26,7 @@ if (window.SwitcherListener == undefined) {
         else if (keystrokes.length >= correctShortcutArr.length) {
             keystrokes = [];
             if (event.keyCode == 32) {
-                keystrokes.push(event.code);
+                keystrokes.push(event.key);
             }
             else {
                 keystrokes.push(event.key);
